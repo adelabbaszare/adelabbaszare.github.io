@@ -1,35 +1,44 @@
 import { motion } from "framer-motion";
-import { MonitorSmartphone, LayoutGrid, Zap, Database } from "lucide-react";
+import {
+  BrainCircuit,
+  BookOpen,
+  MonitorSmartphone,
+  Sparkles,
+} from "lucide-react";
 
 const services = [
   {
-    icon: <MonitorSmartphone className="w-8 h-8" />,
-    title: "Full-Stack Development",
-    description: "End-to-end web applications built with modern frameworks and highly scalable backend architectures.",
+    icon: <BrainCircuit className="w-8 h-8" />,
+    title: "AI & Machine Learning",
+    description:
+      "Developing practical machine learning and deep learning solutions for classification, data analysis, and intelligent systems using Python and modern ML frameworks.",
     color: "from-blue-500/20 to-cyan-500/20",
-    border: "group-hover:border-blue-500/50"
+    border: "group-hover:border-blue-500/50",
   },
   {
-    icon: <LayoutGrid className="w-8 h-8" />,
-    title: "UI/UX Architecture",
-    description: "Designing intuitive, accessible, and stunning interfaces that prioritize user experience and conversion.",
+    icon: <BookOpen className="w-8 h-8" />,
+    title: "AI Research & Academic Projects",
+    description:
+      "Working on research-oriented AI projects in areas such as EEG analysis, NeuroAI, and medical AI, with a focus on reproducible experiments and scientific methodology.",
     color: "from-purple-500/20 to-pink-500/20",
-    border: "group-hover:border-purple-500/50"
+    border: "group-hover:border-purple-500/50",
   },
   {
-    icon: <Zap className="w-8 h-8" />,
-    title: "Performance Optimization",
-    description: "Auditing and supercharging existing codebases for lighting-fast load times and seamless interactions.",
+    icon: <MonitorSmartphone className="w-8 h-8" />,
+    title: "Web Development",
+    description:
+      "Building modern web applications and full-stack projects with React, Vue, Tailwind CSS, Django, and Django REST Framework.",
     color: "from-amber-500/20 to-orange-500/20",
-    border: "group-hover:border-amber-500/50"
+    border: "group-hover:border-amber-500/50",
   },
   {
-    icon: <Database className="w-8 h-8" />,
-    title: "Systems Architecture",
-    description: "Designing complex microservices, API integrations, and robust database models for enterprise needs.",
+    icon: <Sparkles className="w-8 h-8" />,
+    title: "AI-Assisted Development",
+    description:
+      "Using tools such as ChatGPT, Claude, and Cursor for AI pair programming, code review, debugging, test generation, documentation, and more efficient development workflows.",
     color: "from-green-500/20 to-emerald-500/20",
-    border: "group-hover:border-green-500/50"
-  }
+    border: "group-hover:border-green-500/50",
+  },
 ];
 
 export const ServicesSection = () => {
@@ -46,7 +55,8 @@ export const ServicesSection = () => {
           What I Do
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Delivering comprehensive digital solutions that cover the entire lifecycle of professional product engineering.
+          Combining AI research, software engineering, and modern development
+          tools to turn ideas into practical and well-engineered solutions.
         </p>
       </motion.div>
 
@@ -60,14 +70,17 @@ export const ServicesSection = () => {
             viewport={{ once: true, amount: 0.1 }}
             className={`glass-panel p-8 rounded-[2rem] border border-foreground/10 transition-colors duration-500 group relative overflow-hidden ${service.border}`}
           >
-            {/* Hover Glow */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
-            
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
+            />
+
             <div className="relative z-10 flex flex-col h-full">
               <div className="text-foreground/80 group-hover:text-foreground transition-colors mb-6 p-4 bg-foreground/5 w-max rounded-2xl glass-panel">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-foreground tracking-tight">{service.title}</h3>
+              <h3 className="text-2xl font-bold mb-3 text-foreground tracking-tight">
+                {service.title}
+              </h3>
               <p className="text-muted-foreground leading-relaxed flex-grow">
                 {service.description}
               </p>
