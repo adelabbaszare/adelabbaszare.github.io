@@ -37,7 +37,7 @@ export const CareerTimeline = () => {
     {
       year: "2023",
       title: "IT Support Specialist",
-      subtitle: "Islamic Propaganda Organization",
+      subtitle: "Islamic Culture and Communication Organization",
       description:
         "Maintained internal LAN infrastructure and endpoint security software, troubleshooting connectivity and system-reliability issues.",
       icon: <Shield className="h-4 w-4 mr-2 text-primary" />,
