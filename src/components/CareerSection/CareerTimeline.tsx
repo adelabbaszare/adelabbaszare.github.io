@@ -12,6 +12,14 @@ export const CareerTimeline = () => {
   const careerEvents = [
     {
       year: "2025 – Present",
+      title: "Research & AI Projects",
+      subtitle: "EEG, Biomedical AI & Machine Learning",
+      description:
+        "Developing an EEG-based ADHD vs. Control classification research pipeline using Python and PyTorch, with emphasis on preprocessing, representation learning, subject-level validation, robust evaluation, and error analysis.",
+      icon: <BookOpen className="h-4 w-4 mr-2 text-primary" />,
+    },
+    {
+      year: "2025 – Present",
       title: "M.Sc. Student — Artificial Intelligence",
       subtitle: "Islamic Azad University of Mashhad",
       description:
@@ -65,14 +73,6 @@ export const CareerTimeline = () => {
       description:
         "Completed an Associate of Science degree in Materials Science and Engineering.",
       icon: <GraduationCap className="h-4 w-4 mr-2 text-primary" />,
-    },
-    {
-      year: "2025 – Present",
-      title: "Research & AI Projects",
-      subtitle: "EEG, Biomedical AI & Machine Learning",
-      description:
-        "Developing an EEG-based ADHD vs. Control classification research pipeline using Python and PyTorch, with emphasis on preprocessing, representation learning, subject-level validation, robust evaluation, and error analysis.",
-      icon: <BookOpen className="h-4 w-4 mr-2 text-primary" />,
     },
   ];
 
