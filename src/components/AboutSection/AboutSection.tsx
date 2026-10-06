@@ -1,11 +1,27 @@
 import { motion } from "framer-motion";
-import { Code2, Globe2, Layout, Users } from "lucide-react";
+import { BrainCircuit, Code2, Database, FlaskConical } from "lucide-react";
 
-const stats = [
-  { icon: <Layout className="w-6 h-6" />, label: "Years Experience", value: "10+" },
-  { icon: <Code2 className="w-6 h-6" />, label: "Projects Completed", value: "150+" },
-  { icon: <Users className="w-6 h-6" />, label: "Happy Clients", value: "50+" },
-  { icon: <Globe2 className="w-6 h-6" />, label: "Global Brands", value: "12" },
+const focusAreas = [
+  {
+    icon: <BrainCircuit className="w-6 h-6" />,
+    label: "AI & Machine Learning",
+    value: "AI / ML",
+  },
+  {
+    icon: <FlaskConical className="w-6 h-6" />,
+    label: "Research Focus",
+    value: "NeuroAI",
+  },
+  {
+    icon: <Code2 className="w-6 h-6" />,
+    label: "Software Engineering",
+    value: "Python",
+  },
+  {
+    icon: <Database className="w-6 h-6" />,
+    label: "Data & Backend",
+    value: "Django",
+  },
 ];
 
 export const AboutSection = () => {
@@ -21,21 +37,28 @@ export const AboutSection = () => {
         <div className="flex-1 space-y-8">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-              Passionate about <span className="text-gradient-primary">Digital Excellence</span>
+              About <span className="text-gradient-primary">Me</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am a seasoned Full-Stack Developer and UI/UX Designer with over 10 years of experience 
-              delivering high-quality software solutions for global enterprises and startups. My career 
-              blends deep technical expertise with leadership skills, enabling me to design, build, and 
-              lead innovative digital products from concept to launch.
+              I am Adel Zare, an AI / Software Engineer and Computer Engineering
+              M.Sc. Student focused on Artificial Intelligence and Machine Learning.
+              My interests span deep learning, data analysis, intelligent systems,
+              and research-oriented software development.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-5">
+              I work primarily with Python and modern machine learning frameworks,
+              while also building practical software with Django, React, and
+              related web technologies. My current research interests include
+              EEG analysis, NeuroAI, and medical AI, with a focus on turning
+              research ideas into practical and well-engineered solutions.
             </p>
           </div>
         </div>
 
         <div className="flex-1 grid grid-cols-2 gap-4 w-full">
-          {stats.map((stat, i) => (
+          {focusAreas.map((area, i) => (
             <motion.div
-              key={i}
+              key={area.label}
               className="glass-panel p-6 rounded-2xl border border-foreground/10 hover:border-primary/50 transition-colors group relative overflow-hidden"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -44,10 +67,14 @@ export const AboutSection = () => {
             >
               <div className="absolute -right-6 -top-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors" />
               <div className="text-primary mb-4 p-3 bg-primary/10 w-max rounded-xl">
-                {stat.icon}
+                {area.icon}
               </div>
-              <h3 className="text-3xl font-bold text-foreground mb-1">{stat.value}</h3>
-              <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
+              <h3 className="text-2xl font-bold text-foreground mb-1">
+                {area.value}
+              </h3>
+              <p className="text-sm font-medium text-muted-foreground">
+                {area.label}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -55,4 +82,3 @@ export const AboutSection = () => {
     </section>
   );
 };
-
