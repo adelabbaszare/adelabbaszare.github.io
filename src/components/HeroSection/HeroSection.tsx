@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowRight, BookOpen, Github, Linkedin, Send } from "lucide-react";
 import TechStackSection from "../TechStackSection/TechStackSection";
 
 export const HeroSection = () => {
@@ -47,7 +47,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            I build exceptional and accessible digital experiences. Specialized in crafting premium web applications with elegant design systems.
+            AI & Software Engineer focused on machine learning, intelligent systems, and modern web development. I enjoy turning ideas and research into practical, well-engineered solutions.
           </motion.p>
 
           <motion.div 
@@ -56,12 +56,12 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <button className="h-12 px-6 rounded-full bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1">
-              View Work <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="h-12 px-6 rounded-full glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1">
-              Resume <Download className="w-4 h-4" />
-            </button>
+            <a href="#projects" className="h-12 px-6 rounded-full bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1">
+              View Projects <ArrowRight className="w-4 h-4" />
+            </a>
+            <a href="#contact" className="h-12 px-6 rounded-full glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1">
+              Contact Me <ArrowRight className="w-4 h-4" />
+            </a>
           </motion.div>
 
           {/* Social Links */}
@@ -71,8 +71,21 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            {[Twitter, Github, Linkedin, Mail].map((Icon, i) => (
-              <a key={i} href="#" className="text-muted-foreground hover:text-foreground transition-colors hover:-translate-y-1 transform duration-200">
+            {[
+              { label: "GitHub", href: "https://github.com/adelabbaszare", Icon: Github },
+              { label: "LinkedIn", href: "https://www.linkedin.com/in/adel-abbaszare/", Icon: Linkedin },
+              { label: "Google Scholar", href: "https://scholar.google.com/citations?user=K2Umz54AAAAJ&hl=en", Icon: BookOpen },
+              { label: "Telegram", href: "https://t.me/adelzre", Icon: Send },
+            ].map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                title={label}
+                className="text-muted-foreground hover:text-foreground transition-colors hover:-translate-y-1 transform duration-200"
+              >
                 <Icon className="w-5 h-5" />
               </a>
             ))}
@@ -81,7 +94,7 @@ export const HeroSection = () => {
 
         {/* Right Content - Visual */}
         <motion.div 
-          className="flex-1 w-full max-w-[280px] sm:max-w-sm md:max-w-md relative pb-10"
+          className="flex-1 w-full max-w-[280px] sm:max-w-sm md:max-w-md relative pb-10 overflow-visible"
           initial={{ opacity: 0, scale: 0.9, filter: "blur(20px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -89,28 +102,29 @@ export const HeroSection = () => {
           {/* Decorative Elements */}
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20 rounded-[2rem] transform rotate-3 scale-105 pointer-events-none" />
           
-          <div className="glass-panel p-2 rounded-[2rem] relative z-10 overflow-hidden shadow-2xl">
+          <div className="glass-panel p-2 rounded-[2rem] relative z-10 shadow-2xl">
             <img 
               src="/images/profile/adel-zare.webp"
               alt="Adel Zare"
               className="w-full aspect-[4/5] object-cover rounded-[1.5rem] filter contrast-125 hover:scale-105 transition-transform duration-700"
             />
-            {/* Floating Tags */}
-            <motion.div 
-              className="absolute top-6 -left-2 md:-left-6 glass-panel px-4 py-2 rounded-xl text-xs font-semibold shadow-xl"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            >
-              React / Next.js
-            </motion.div>
-            <motion.div 
-              className="absolute bottom-10 -right-2 md:-right-4 glass-panel px-4 py-2 rounded-xl text-xs font-semibold shadow-xl"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            >
-              UI/UX Design
-            </motion.div>
           </div>
+
+          {/* Floating Tags */}
+          <motion.div
+            className="absolute top-8 -left-3 md:-left-8 z-20 glass-panel px-4 py-2 rounded-xl text-xs font-semibold shadow-xl whitespace-nowrap"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            Python · AI / ML
+          </motion.div>
+          <motion.div
+            className="absolute bottom-14 -right-3 md:-right-8 z-20 glass-panel px-4 py-2 rounded-xl text-xs font-semibold shadow-xl whitespace-nowrap"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          >
+            React · Django
+          </motion.div>
         </motion.div>
 
       </div>
