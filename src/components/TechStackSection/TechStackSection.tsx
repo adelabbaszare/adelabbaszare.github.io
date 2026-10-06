@@ -12,7 +12,6 @@ const technologies: Technology[] = [
   { name: "MNE-Python", logo: "https://mne.tools/stable/_images/mne_logo.svg" },
   { name: "scikit-learn", logo: "https://cdn.simpleicons.org/scikitlearn" },
   { name: "Django", logo: "https://cdn.simpleicons.org/django" },
-  { name: "Django REST Framework", logo: "https://cdn.simpleicons.org/djangorestframework" },
   { name: "React", logo: "https://cdn.simpleicons.org/react" },
   { name: "Vue.js", logo: "https://cdn.simpleicons.org/vuedotjs" },
   { name: "Tailwind CSS", logo: "https://cdn.simpleicons.org/tailwindcss" },
