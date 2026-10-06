@@ -38,7 +38,7 @@ export const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             Hi, I'm <br className="hidden md:block" />
-            <span className="text-gradient-primary">Scarlett Rose</span>
+            <span className="text-gradient-primary">Adel Abbaszare</span>
           </motion.h1>
 
           <motion.p 
@@ -91,8 +91,8 @@ export const HeroSection = () => {
           
           <div className="glass-panel p-2 rounded-[2rem] relative z-10 overflow-hidden shadow-2xl">
             <img 
-              src="https://images.pexels.com/photos/5908778/pexels-photo-5908778.jpeg" 
-              alt="Scarlett Rose"
+              src="/images/profile/adel-zare.webp"
+              alt="Adel Zare"
               className="w-full aspect-[4/5] object-cover rounded-[1.5rem] filter contrast-125 hover:scale-105 transition-transform duration-700"
             />
             {/* Floating Tags */}
