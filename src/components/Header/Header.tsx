@@ -32,24 +32,63 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isMobileMenuOpen) return;
+
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        setShowHeader(false); // Scrolling down
+        setShowHeader(false);
       } else {
-        setShowHeader(true); // Scrolling up
+        setShowHeader(true);
       }
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const scrollY = window.scrollY;
+    const bodyStyle = document.body.style;
+    const htmlStyle = document.documentElement.style;
+
+    bodyStyle.position = "fixed";
+    bodyStyle.top = `-${scrollY}px`;
+    bodyStyle.left = "0";
+    bodyStyle.right = "0";
+    bodyStyle.width = "100%";
+    bodyStyle.overflow = "hidden";
+    htmlStyle.overflow = "hidden";
+
+    return () => {
+      bodyStyle.position = "";
+      bodyStyle.top = "";
+      bodyStyle.left = "";
+      bodyStyle.right = "";
+      bodyStyle.width = "";
+      bodyStyle.overflow = "";
+      htmlStyle.overflow = "";
+
+      window.scrollTo(0, scrollY);
+    };
+  }, [isMobileMenuOpen]);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   const handleScrollTo = (id: string) => {
-    if (lenis) {
-      lenis.scrollTo(id);
-    }
-    setIsMobileMenuOpen(false);
+    closeMobileMenu();
+
+    requestAnimationFrame(() => {
+      if (lenis) {
+        lenis.scrollTo(id);
+      } else {
+        document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   };
 
   const menuVariants: Variants = {
@@ -84,7 +123,6 @@ export default function Header() {
           className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4"
         >
           <div className="glass-panel w-full max-w-4xl rounded-[2rem] flex items-center justify-between px-6 py-4 shadow-xl">
-            {/* Logo */}
             <a
               onClick={() => handleScrollTo("#hero")}
               className="cursor-pointer font-bold text-xl flex items-center gap-2 group"
@@ -94,7 +132,6 @@ export default function Header() {
               </div>
             </a>
 
-            {/* Desktop Navigation */}
             <nav className="hidden md:flex flex-1 justify-center">
               <ul className="flex space-x-8">
                 {navItems.map((item) => (
@@ -113,7 +150,6 @@ export default function Header() {
               </ul>
             </nav>
 
-            {/* Actions: Theme & Mobile Toggle */}
             <div className="flex items-center gap-2">
               <motion.button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -135,17 +171,17 @@ export default function Header() {
                 </AnimatePresence>
               </motion.button>
 
-              {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 className="md:hidden text-foreground hover:text-primary transition-colors p-2"
+                aria-label="Open mobile menu"
+                aria-expanded={isMobileMenuOpen}
               >
                 <Menu size={24} />
               </button>
             </div>
           </div>
 
-          {/* Mobile Sidebar */}
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div
@@ -155,15 +191,16 @@ export default function Header() {
                   exit: "closed",
                   variants: menuVariants,
                 } as MotionProps)}
-                className="fixed inset-0 z-40 bg-background/95 backdrop-blur-2xl md:hidden flex flex-col items-center justify-center"
+                className="fixed inset-0 z-40 bg-background/95 backdrop-blur-2xl md:hidden flex flex-col items-center justify-center overflow-hidden overscroll-none"
               >
                 <motion.button
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={closeMobileMenu}
                   className="absolute top-8 right-8 text-foreground"
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0, opacity: 0 }}
                   transition={{ delay: 0.2 }}
+                  aria-label="Close mobile menu"
                 >
                   <X size={32} />
                 </motion.button>
@@ -191,4 +228,3 @@ export default function Header() {
     </AnimatePresence>
   );
 }
-
