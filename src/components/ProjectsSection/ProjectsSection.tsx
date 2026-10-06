@@ -8,7 +8,7 @@ export const ProjectsSection = () => {
       title: "ADHD EEG Classification",
       subtitle: "EEG signal analysis and ADHD vs. Control classification using machine learning and deep learning.",
       link: "https://github.com/adelabbaszare/ADHD_Classification_EEG",
-      image: "/images/projects/adhd-eeg-classification.webp",
+      image: "/images/projects/adhd-eeg-classification.jpg",
       className: "md:col-span-2 md:row-span-2",
     },
     {
@@ -24,7 +24,7 @@ export const ProjectsSection = () => {
       title: "Learning Management System",
       subtitle: "Full-stack LMS built with Django REST Framework, Vue 3, and Tailwind CSS.",
       link: "https://github.com/adelabbaszare/Learning_management_system",
-      image: "/images/projects/learning-management-system.webp",
+      image: "/images/projects/Learning_management_system.webp",
       className: "md:col-span-1 md:row-span-1",
     },
     {
@@ -32,7 +32,7 @@ export const ProjectsSection = () => {
       title: "AI News Telegram Bot",
       subtitle: "Automated AI news aggregation, summarization, and Telegram publishing pipeline.",
       link: "https://github.com/adelabbaszare/AI-News-Telegram-Bot",
-      image: "/images/projects/ai-news-telegram-bot.webp",
+      image: "/images/projects/AI-News-Telegram-Bot.webp",
       className: "md:col-span-1 md:row-span-1",
     },
     {
@@ -40,7 +40,7 @@ export const ProjectsSection = () => {
       title: "Mashhad Housing Market Analysis",
       subtitle: "Data analysis and visualization of apartment sales and housing market trends in Mashhad.",
       link: "https://github.com/adelabbaszare/Mashhad-housing-market-price-analysis",
-      image: "/images/projects/mashhad-housing-market-analysis.webp",
+      image: "/images/projects/mashhad-housing-market-analysis.jpg",
       className: "md:col-span-2 md:row-span-1",
     },
   ];
