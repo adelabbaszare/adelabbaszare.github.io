@@ -3,24 +3,24 @@ import { motion } from "framer-motion";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "مهدی بختیاری",
-      role: "همکار و توسعه‌دهنده نرم‌افزار",
+      name: "Mahdi Bakhtiari",
+      role: "SEO Specialist",
       content:
-        "همکاری با عادل در پروژه‌های نرم‌افزاری و پژوهشی تجربه‌ای حرفه‌ای و قابل اعتماد بود. توانایی او در حل مسئله، یادگیری سریع و استفاده مؤثر از ابزارهای هوش مصنوعی، روند توسعه و رفع اشکال را بسیار کارآمد می‌کند.",
+        "Working with Adel on software and research projects has been a professional and reliable experience. His problem-solving skills, fast learning ability, and effective use of AI tools make the development and debugging process highly efficient.",
       image: "/images/testimonials/mahdi-bakhtiari.jpg",
     },
     {
-      name: "مهندسی محدثه امیدوار",
-      role: "همکار پژوهشی و مهندسی",
+      name: "Mohadese Omidvar",
+      role: "Research & Engineering Collaborator",
       content:
-        "عادل در کار پژوهشی، تحلیل منابع و توسعه راهکارهای مبتنی بر هوش مصنوعی رویکردی دقیق و مسئولانه دارد. پیگیری مستمر، مستندسازی و توجه او به کیفیت نتایج، همکاری پژوهشی را منظم‌تر و مؤثرتر می‌کند.",
+        "Adel takes a precise and responsible approach to research, literature analysis, and AI-driven solutions. His consistency, documentation skills, and strong attention to result quality make research collaboration structured and productive.",
       image: "/images/testimonials/mohadese-omidvar.jpg",
     },
     {
-      name: "مرتضی ذاکری",
-      role: "همکار و متخصص فناوری",
+      name: "Morteza Zakeri",
+      role: "Marketing Manager",
       content:
-        "عادل ترکیبی از مهارت‌های برنامه‌نویسی، تحلیل داده و یادگیری ماشین را در پروژه‌های واقعی به کار می‌گیرد. رویکرد او در توسعه نرم‌افزار، دیباگ و بهبود مستمر کد، نشان‌دهنده توجه جدی به کیفیت مهندسی است.",
+        "Adel combines software development, data analysis, and machine learning skills to build practical solutions. His approach to development, debugging, and continuous code improvement reflects a strong commitment to software quality and engineering excellence.",
       image: "/images/testimonials/morteza-zakeri.jpg",
     },
   ];
@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
               <img
                 src={test.image}
                 alt={test.name}
-                className="w-12 h-12 rounded-full object-cover border border-foreground/10"
+                className="w-12 h-12 rounded-full object-cover border border-foreground/10 pointer-events-none select-none"
               />
               <div>
                 <h4 className="text-foreground font-bold text-sm">{test.name}</h4>
