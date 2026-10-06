@@ -20,11 +20,16 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > window.innerHeight * 0.5) {
-        setShowDock(true); 
-      } else if (currentScrollY < window.innerHeight * 0.5) {
-        setShowDock(false); 
+      const footer = document.querySelector("footer");
+      const footerTop = footer ? footer.getBoundingClientRect().top + currentScrollY : Infinity;
+      const viewportBottom = currentScrollY + window.innerHeight;
+
+      if (currentScrollY < window.innerHeight * 0.5 || viewportBottom >= footerTop) {
+        setShowDock(false);
+      } else if (currentScrollY > lastScrollY) {
+        setShowDock(true);
       }
+
       setLastScrollY(currentScrollY);
     };
 
