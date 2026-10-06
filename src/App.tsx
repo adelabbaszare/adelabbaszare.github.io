@@ -67,7 +67,9 @@ function App() {
 
         {/* Footer */}
         <footer className="w-full py-12 text-center text-muted-foreground border-t border-foreground/10 mt-20 relative z-10 glass-panel border-b-0 rounded-t-[3rem]">
-          <p className="text-sm">© {new Date().getFullYear()} Scarlett Rose. Crafted with Lightswind UI.</p>
+          <p className="text-sm">
+            © {new Date().getFullYear()} Adel Abbaszare. AI & Software Engineer.
+          </p>
         </footer>
 
         {/* Floating Dock */}
