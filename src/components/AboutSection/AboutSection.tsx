@@ -40,7 +40,7 @@ export const AboutSection = () => {
               About <span className="text-gradient-primary">Me</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am Adel Zare, an AI / Software Engineer and Computer Engineering
+              I am Adel Abbaszare, an AI / Software Engineer and Computer Engineering
               M.Sc. Student focused on Artificial Intelligence and Machine Learning.
               My interests span deep learning, data analysis, intelligent systems,
               and research-oriented software development.
