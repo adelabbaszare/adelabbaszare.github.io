@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants, MotionProps } from "framer-motion";
 import { Menu, X, Sun, Moon, Hexagon } from "lucide-react";
@@ -17,7 +17,7 @@ export default function Header() {
     return localStorage.getItem("theme") || "dark";
   });
   const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const lenis = useLenis();
 
@@ -35,17 +35,15 @@ export default function Header() {
       if (isMobileMenuOpen) return;
 
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        setShowHeader(false);
-      } else {
-        setShowHeader(true);
-      }
-      setLastScrollY(currentScrollY);
+      const previousScrollY = lastScrollYRef.current;
+
+      setShowHeader(currentScrollY <= previousScrollY || currentScrollY <= 80);
+      lastScrollYRef.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY, isMobileMenuOpen]);
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
@@ -83,11 +81,16 @@ export default function Header() {
     closeMobileMenu();
 
     requestAnimationFrame(() => {
-      if (lenis) {
-        lenis.scrollTo(id);
-      } else {
-        document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-      }
+      requestAnimationFrame(() => {
+        if (lenis) {
+          lenis.scrollTo(id);
+        } else {
+          document.querySelector(id)?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
     });
   };
 
@@ -207,7 +210,7 @@ export default function Header() {
 
                 <motion.ul
                   {...({ variants: listVariants } as MotionProps)}
-                  className="flex flex-col items-center justify-center h-full space-y-10"
+                  className="flex flex-col items-center justify-center h-full space-y-8"
                 >
                   {navItems.map((item) => (
                     <motion.li key={item.name} {...({ variants: itemVariants } as MotionProps)}>
@@ -219,6 +222,40 @@ export default function Header() {
                       </a>
                     </motion.li>
                   ))}
+
+                  <motion.li {...({ variants: itemVariants } as MotionProps)}>
+                    <motion.button
+                      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                      className="mt-2 flex items-center gap-3 px-5 py-3 rounded-full text-lg font-semibold text-muted-foreground hover:text-foreground hover:bg-primary/20 border border-foreground/10 transition-colors"
+                      whileTap={{ scale: 0.95 }}
+                      aria-label="Toggle Theme"
+                    >
+                      <AnimatePresence mode="wait" initial={false}>
+                        {theme === "dark" ? (
+                          <motion.div
+                            key="mobile-moon"
+                            initial={{ y: -10, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: 10, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <Moon size={20} className="text-foreground" />
+                          </motion.div>
+                        ) : (
+                          <motion.div
+                            key="mobile-sun"
+                            initial={{ y: 10, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -10, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <Sun size={20} className="text-foreground" />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                      <span>{theme === "dark" ? "Dark Mode" : "Light Mode"}</span>
+                    </motion.button>
+                  </motion.li>
                 </motion.ul>
               </motion.div>
             )}
