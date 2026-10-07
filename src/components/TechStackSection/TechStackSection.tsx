@@ -16,13 +16,15 @@ const technologies: Technology[] = [
   { name: "Vue.js", logo: "https://cdn.simpleicons.org/vuedotjs" },
   { name: "Tailwind CSS", logo: "https://cdn.simpleicons.org/tailwindcss" },
   { name: "C++", logo: "https://cdn.simpleicons.org/cplusplus" },
-  { name: "C#", logo: "https://cdn.simpleicons.org/csharp" },
   { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript" },
   { name: "SQL", logo: "https://cdn.simpleicons.org/postgresql" },
   { name: "Linux", logo: "https://cdn.simpleicons.org/linux" },
   { name: "Git", logo: "https://cdn.simpleicons.org/git" },
   { name: "GitHub", logo: "https://cdn.simpleicons.org/github" },
   { name: "Docker", logo: "https://cdn.simpleicons.org/docker" },
+  { name: "Pandas", logo: "https://cdn.simpleicons.org/pandas" },
+  { name: "Numpy", logo: "https://cdn.simpleicons.org/numpy" },
+  { name: "Jupyter", logo: "https://cdn.simpleicons.org/jupyter" },
 ];
 
 const TechStackSection = () => {

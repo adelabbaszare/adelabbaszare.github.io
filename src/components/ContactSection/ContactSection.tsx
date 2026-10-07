@@ -28,7 +28,7 @@ export const ContactSection = () => {
             </div>
 
             <div className="space-y-6">
-              <a href="mailto:adelzre@gmail.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
+              <a href="mailto:learningwithadel@gmail.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
                 <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail className="w-5 h-5" />
                 </div>

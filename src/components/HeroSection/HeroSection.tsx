@@ -106,7 +106,7 @@ export const HeroSection = () => {
             <img 
               src="/images/profile/adel-zare.webp"
               alt="Adel Zare"
-              className="w-full aspect-[4/5] object-cover rounded-[1.5rem] filter contrast-125 hover:scale-105 transition-transform duration-700"
+              className="w-full aspect-[4/5] object-cover rounded-[1.5rem] filter contrast-125 hover:scale-105 transition-transform duration-700 select-none"
             />
           </div>
 
