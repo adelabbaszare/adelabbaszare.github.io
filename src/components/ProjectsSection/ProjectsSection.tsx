@@ -5,10 +5,10 @@ export const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "ADHD EEG Classification",
-      subtitle: "EEG signal analysis and ADHD vs. Control classification using machine learning and deep learning.",
-      link: "https://github.com/adelabbaszare/ADHD_Classification_EEG",
-      image: "/images/projects/adhd-eeg-classification.jpg",
+      title: "Persian Sentiment Analysis of Digikala Comments",
+      subtitle: "A modular Persian NLP sentiment analysis pipeline for Digikala user comments, combining Selenium/BeautifulSoup web scraping, Persian text preprocessing, TF-IDF vectorization, and four classical ML classifiers (Logistic Regression, Naive Bayes, SVM, Random Forest) with stratified 5-fold cross-validation, pytest, and GitHub Actions CI.",
+      link: "https://github.com/adelabbaszare/Sentiment-analysis-of-digikala-user-comments",
+      image: "/images/projects/Sentiment Analysis Project Infographic.webp",
       className: "md:col-span-2 md:row-span-2",
     },
     {
