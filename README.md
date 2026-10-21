@@ -10,7 +10,7 @@
 
 **English | [فارسی](./README_fa.md)**
 
-A modern, responsive personal portfolio website for **Adel Abbaszare**, focused on AI/ML engineering, research, software development, and selected technical projects.
+A modern, responsive personal portfolio website, focused on AI/ML engineering, research, software development, and selected technical projects.
 
 The site is built as a static React application with a component-based architecture, TypeScript, Vite, and Tailwind CSS. It is deployed automatically to GitHub Pages.
 
@@ -191,19 +191,6 @@ The interface follows a modern visual language centered around:
 - Dark and light themes.
 - Mobile-first navigation behavior.
 - Accessible labels for interactive controls and project links.
-
-## 👤 About Adel
-
-**Adel Abbaszare** is an AI/ML Software Engineer and researcher working across:
-
-- Artificial intelligence and machine learning
-- Deep learning
-- EEG and biomedical signal processing
-- Medical AI
-- Data analysis
-- Modern web development
-
-For professional details, research interests, and selected work, visit the portfolio and linked profiles.
 
 ## 🔗 Links
 
