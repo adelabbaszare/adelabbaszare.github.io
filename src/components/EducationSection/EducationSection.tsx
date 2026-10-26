@@ -6,7 +6,7 @@ export const EducationSection = () => {
   const education = [
     {
       degree: "M.Sc. in Computer Engineering — Artificial Intelligence",
-      school: "Islamic Azad University of Mashhad",
+      school: "Azad University of Mashhad",
       year: "2025 – Present",
       details: [
         "Advanced study in artificial intelligence, machine learning, and deep learning",
@@ -16,7 +16,7 @@ export const EducationSection = () => {
     },
     {
       degree: "B.Sc. in Computer Software Engineering",
-      school: "Islamic Azad University of Mashhad",
+      school: "Azad University of Mashhad",
       year: "2023 – 2025",
       details: [
         "Built a foundation in software engineering, programming, algorithms, and data-driven development",

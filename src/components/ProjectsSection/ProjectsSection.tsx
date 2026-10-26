@@ -13,10 +13,10 @@ export const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: "MS Lesion Segmentation",
-      subtitle: "Medical image segmentation project using U-Net and a Streamlit-based interface.",
-      link: "https://github.com/adelabbaszare/MS-Lesion-Segmentation-Streamlit",
-      image: "/images/projects/ms-lesion-segmentation.webp",
+      title: "Vue Tailwind Django Portfolio",
+      subtitle: "A modern, full-stack personal portfolio template built with Vue 3, Tailwind CSS, Vite, Django, and Django REST Framework.",
+      link: "https://github.com/adelabbaszare/Vue-Tailwind-Django-Portfolio",
+      image: "/images/projects/vue-tailwind-django-portfolio.webp",
       className: "md:col-span-1 md:row-span-1",
     },
     {

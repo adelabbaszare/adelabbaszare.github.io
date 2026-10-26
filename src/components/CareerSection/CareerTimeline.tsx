@@ -21,7 +21,7 @@ export const CareerTimeline = () => {
     {
       year: "2025 – Present",
       title: "M.Sc. Student — Artificial Intelligence",
-      subtitle: "Islamic Azad University of Mashhad",
+      subtitle: "Azad University of Mashhad",
       description:
         "Pursuing an M.Sc. in Computer Engineering with a focus on Artificial Intelligence. Research interests include EEG and biomedical signal processing, brain connectivity, computational neuroscience, AI for healthcare, and neuropsychiatric applications.",
       icon: <BrainCircuit className="h-4 w-4 mr-2 text-primary" />,
@@ -37,7 +37,7 @@ export const CareerTimeline = () => {
     {
       year: "2024",
       title: "Teaching Assistant — Computer Engineering",
-      subtitle: "Islamic Azad University of Mashhad",
+      subtitle: "Azad University of Mashhad",
       description:
         "Taught algorithms, data structures, and object-oriented programming in C++. Reviewed student projects and provided feedback on debugging, software quality, and clean-code practices.",
       icon: <Code2 className="h-4 w-4 mr-2 text-primary" />,
@@ -45,7 +45,7 @@ export const CareerTimeline = () => {
     {
       year: "2023",
       title: "IT Support Specialist",
-      subtitle: "Islamic Culture and Communication Organization",
+      subtitle: "Culture and Communication Organization",
       description:
         "Maintained internal LAN infrastructure and endpoint security software, troubleshooting connectivity and system-reliability issues.",
       icon: <Shield className="h-4 w-4 mr-2 text-primary" />,
@@ -61,7 +61,7 @@ export const CareerTimeline = () => {
     {
       year: "2023 – 2025",
       title: "B.Sc. — Computer Software Engineering",
-      subtitle: "Islamic Azad University of Mashhad",
+      subtitle: "Azad University of Mashhad",
       description:
         "Completed a B.Sc. in Computer Software Engineering, building a foundation in software engineering, programming, algorithms, data structures, and computer science.",
       icon: <GraduationCap className="h-4 w-4 mr-2 text-primary" />,

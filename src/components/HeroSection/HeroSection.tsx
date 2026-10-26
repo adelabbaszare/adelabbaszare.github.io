@@ -75,7 +75,7 @@ export const HeroSection = () => {
               { label: "GitHub", href: "https://github.com/adelabbaszare", Icon: Github },
               { label: "LinkedIn", href: "https://www.linkedin.com/in/adel-abbaszare/", Icon: Linkedin },
               { label: "Google Scholar", href: "https://scholar.google.com/citations?user=K2Umz54AAAAJ&hl=en", Icon: BookOpen },
-              { label: "Telegram", href: "https://t.me/adelzre", Icon: Send },
+              { label: "Telegram", href: "https://t.me/learnwithadel", Icon: Send },
             ].map(({ label, href, Icon }) => (
               <a
                 key={label}
