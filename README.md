@@ -197,7 +197,6 @@ The interface follows a modern visual language centered around:
 - **Portfolio:** https://adelabbaszare.github.io/
 - **GitHub:** https://github.com/adelabbaszare
 - **LinkedIn:** https://www.linkedin.com/in/adel-abbaszare/
-- **LearnwithAdel:** https://learnwithadel.ir/
 
 ## 📄 License
 
