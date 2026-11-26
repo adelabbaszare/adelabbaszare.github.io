@@ -5,7 +5,7 @@
 [![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.x-0055FF?logo=framer&logoColor=white)](https://motion.dev/)
-[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/adelabbaszare/adelabbaszare.github.io/ci.yml?branch=main&label=CI)](https://github.com/adelabbaszare/adelabbaszare.github.io/actions/workflows/ci.yml)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/adelabbaszare/adelzare.github.io/ci.yml?branch=main&label=CI)](https://github.com/adelzare/adelzare.github.io/actions/workflows/ci.yml)
 [![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-222?logo=github&logoColor=white)](https://pages.github.com/)
 
 **[English](./README.md) | فارسی**
@@ -49,7 +49,7 @@
 ## 📁 ساختار پروژه
 
 ```text
-adelabbaszare.github.io/
+adelzare.github.io/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml                 # بررسی lint و production build
@@ -94,8 +94,8 @@ adelabbaszare.github.io/
 ابتدا مخزن را Clone کنید:
 
 ```bash
-git clone https://github.com/adelabbaszare/adelabbaszare.github.io.git
-cd adelabbaszare.github.io
+git clone https://github.com/adelzare/adelzare.github.io.git
+cd adelzare.github.io
 ```
 
 سپس نسخه‌های دقیق وابستگی‌های ثبت‌شده در lockfile را نصب کنید:
@@ -162,9 +162,9 @@ Workflow استقرار در [`.github/workflows/deploy.yml`](./.github/workflow
 
 این Portfolio با استفاده از **GitHub Pages** منتشر می‌شود.
 
-- Repository: https://github.com/adelabbaszare/adelabbaszare.github.io
-- وب‌سایت: https://adelabbaszare.github.io/
-- Workflow استقرار: [GitHub Actions](https://github.com/adelabbaszare/adelabbaszare.github.io/actions/workflows/deploy.yml)
+- Repository: https://github.com/adelzare/adelzare.github.io
+- وب‌سایت: https://adelzare.github.io/
+- Workflow استقرار: [GitHub Actions](https://github.com/adelzare/adelzare.github.io/actions/workflows/deploy.yml)
 
 Workflow استقرار با Node.js 20 پروژه را build کرده و پوشه `dist/` را با GitHub Pages Actions رسمی منتشر می‌کند.
 
@@ -194,7 +194,7 @@ Workflow استقرار با Node.js 20 پروژه را build کرده و پوش
 
 ## 🔗 لینک‌ها
 
-- **Portfolio:** https://adelabbaszare.github.io/
+- **Portfolio:** https://adelzare.github.io/
 - **GitHub:** https://github.com/adelabbaszare
 - **LinkedIn:** https://www.linkedin.com/in/adel-abbaszare/
 
